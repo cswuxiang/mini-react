@@ -1,7 +1,9 @@
 
 import './index.css'
 import { ReactDOM, Component, useReducer} from '../which-react'
+import pick from 'lodash/pick'
 function FunctionComponent(props) {
+  console.log(pick)
   const [count ,setCount ] = useReducer(x => x + 1, 0)
   return (
     <div className='border'>
@@ -43,4 +45,5 @@ const jsx =  (
     <FragmentComponent  name="fragment组件"/>
   </div>
 )
+console.log(jsx)
 ReactDOM.createRoot(document.getElementById('root')).render(jsx)
